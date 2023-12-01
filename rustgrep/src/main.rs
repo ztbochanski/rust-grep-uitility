@@ -4,7 +4,7 @@ use std::fs;
 fn main() {
     let args: Vec<String> = env::args().collect();
 
-    let config = Config::new(&args);
+    let config = Config::build(&args);
 
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
