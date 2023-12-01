@@ -28,6 +28,6 @@ impl Config {
         let query = args[1].clone(); // clone is expensive but simple
         let file_path = args[2].clone();
 
-        Config { query, file_path }
+        Ok(Config { query, file_path })
     }
 }
