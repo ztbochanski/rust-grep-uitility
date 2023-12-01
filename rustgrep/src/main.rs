@@ -20,9 +20,11 @@ struct Config {
     file_path: String,
 }
 
-fn parse_config(args: &[String])  -> Config {
-    let query = args[1].clone();
-    let file_path = args[2].clone();
+impl Config {
+    fn new(args: &[String])  -> Config {
+        let query = args[1].clone(); // clone is expensive but simple
+        let file_path = args[2].clone();
 
-    Config { query, file_path }
+        Config { query, file_path }
+    }
 }
